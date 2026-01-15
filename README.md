@@ -1,29 +1,51 @@
-# Pricing Service
+# Backend Pricing & Availability Service
 
-Minimal Python pricing service (small example project).
+## Overview
+This project is a backend service that simulates dynamic pricing logic similar to
+travel and marketplace pricing systems. It calculates optimized prices based on
+demand and availability inputs.
 
-## Requirements
+## Tech Stack
+- Python
+- Flask
+- REST APIs
+- Pytest
+- Git
 
-- Python 3.8+
-- See `requirements.txt` for Python packages
+## Features
+- REST API to calculate dynamic prices
+- Modular, maintainable code structure
+- Input validation and error handling
+- Unit tests for pricing logic
 
-## Setup
+## API Example
 
-Create a virtual environment and install dependencies:
+POST /price
 
-```bash
-python -m venv .venv
-.\.venv\Scripts\activate
-pip install -r requirements.txt
-```
+Request:
+{
+  "base_price": 120,
+  "demand": "high",
+  "availability": "low"
+}
 
-## Run tests
+Response:
+{
+  "final_price": 187.2
+}
 
-```bash
-pytest
-```
+## How to Run
+1. Install dependencies:
+   pip install -r requirements.txt
 
-## Project layout
+2. Run the application:
+   python app/main.py
 
-- `app/` — service code
-- `tests/` — tests
+3. Run tests:
+   pytest
+
+## Learning Outcomes
+- Backend API development
+- Object-oriented programming
+- Writing testable and maintainable code
+- Debugging and validation
